@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
 
     boolean symbol = false,additionFlag=false,subtractionFlag=false,multiplicationFlag=false,divisionFlag=false;
     Boolean equalFlag=false;
-    int firstNumber,secondNumber,result;
+    float firstNumber,secondNumber,result;
     String operation="";
 
 
@@ -357,7 +357,7 @@ public class MainActivity extends AppCompatActivity {
 
                         prevInput = screen.getText().toString();
 
-                        firstNumber = Integer.parseInt(prevInput);
+                        firstNumber = Float.parseFloat(prevInput);
                         screen.setText(prevInput + "+");
                         prevInput1 = screen.getText().toString();
                     }
@@ -380,7 +380,7 @@ public class MainActivity extends AppCompatActivity {
 
                         prevInput = screen.getText().toString();
 
-                        firstNumber = Integer.parseInt(prevInput);
+                        firstNumber = Float.parseFloat(prevInput);
                         screen.setText(prevInput + "-");
                         prevInput1 = screen.getText().toString();
                     }
@@ -401,7 +401,7 @@ public class MainActivity extends AppCompatActivity {
 
                         prevInput = screen.getText().toString();
 
-                        firstNumber = Integer.parseInt(prevInput);
+                        firstNumber = Float.parseFloat(prevInput);
                         screen.setText(prevInput + "*");
                         prevInput1 = screen.getText().toString();
                     }
@@ -422,7 +422,7 @@ public class MainActivity extends AppCompatActivity {
 
                         prevInput = screen.getText().toString();
 
-                        firstNumber = Integer.parseInt(prevInput);
+                        firstNumber = Float.parseFloat(prevInput);
                         screen.setText(prevInput + "/");
                         prevInput1 = screen.getText().toString();
                     }
@@ -446,18 +446,18 @@ public class MainActivity extends AppCompatActivity {
 
 
                     result = calculate(operation);
-                    screen.setText(Integer.toString(result));
+                    screen.setText(Float.toString(result));
                     equalFlag=true;
                     symbol = false;
             }
         });
     }
 
-    public int calculate(String operation)
+    public float calculate(String operation)
     {
         String prevInput;
         prevInput = screen.getText().toString();
-        int result=0;
+        float result=0;
 
         switch(operation)
         {
@@ -467,24 +467,24 @@ public class MainActivity extends AppCompatActivity {
                 break;
 
             case "addition":
-            secondNumber = Integer.parseInt(prevInput.substring(prevInput.indexOf("+")+1));
+            secondNumber = Float.parseFloat(prevInput.substring(prevInput.indexOf("+")+1));
             result = firstNumber + secondNumber;
             break;
 
 
             case "subtraction":
 
-            secondNumber = Integer.parseInt(prevInput.substring(prevInput.indexOf("-")+1));
+            secondNumber = Float.parseFloat(prevInput.substring(prevInput.indexOf("-")+1));
             result = firstNumber - secondNumber;
             break;
 
             case "multiplication":
-                secondNumber = Integer.parseInt(prevInput.substring(prevInput.indexOf("*")+1));
+                secondNumber = Float.parseFloat(prevInput.substring(prevInput.indexOf("*")+1));
                 result = firstNumber * secondNumber;
                 break;
 
             case "division":
-                secondNumber = Integer.parseInt(prevInput.substring(prevInput.indexOf("/")+1));
+                secondNumber = Float.parseFloat(prevInput.substring(prevInput.indexOf("/")+1));
                 result = firstNumber / secondNumber;
                 break;
         }
