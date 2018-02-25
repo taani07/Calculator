@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     boolean symbol = false,additionFlag=false,subtractionFlag=false,multiplicationFlag=false,divisionFlag=false;
-    Boolean equalFlag=false;
+    Boolean equalto=false;
     float firstNumber,secondNumber,result;
     String operation="";
 
@@ -77,19 +77,19 @@ public class MainActivity extends AppCompatActivity {
 
 
         //Buttons functionality initialised
-            One.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    prevInput = screen.getText().toString();
-                    if(prevInput.length()<9) {
+        One.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                prevInput = screen.getText().toString();
+                if(prevInput.length()<9) {
 
-                        // for Checking the length of numbers it should not be more than 9
-                        if(prevInput.equals("0"))
+                    // for Checking the length of numbers it should not be more than 9
+                    if(prevInput.equals("0"))
                         screen.setText("1");
-                            // for overwrite the privious input
-                    else if(equalFlag) {
+                        // for overwrite the privious input
+                    else if(equalto) {
                         screen.setText("1");
-                        equalFlag=false;
+                        equalto=false;
                     }
                     else
                     {screen.setText(prevInput + "1");}
@@ -98,209 +98,209 @@ public class MainActivity extends AppCompatActivity {
                 {
                     Toast.makeText(getApplicationContext(),"length Exceeded the limit",Toast.LENGTH_LONG).show();
                 }}
-            });
+        });
 
 
 
-            two.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
+        two.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
 
-                    prevInput = screen.getText().toString();
-                    if (prevInput.length() < 9) {
-                        if(prevInput.equals("0"))
-                            screen.setText("2");
-                        else if(equalFlag) {
-                            screen.setText("2");
-                            equalFlag=false;
-                        }
-                        else
-                            screen.setText(prevInput + "2");
+                prevInput = screen.getText().toString();
+                if (prevInput.length() < 9) {
+                    if(prevInput.equals("0"))
+                        screen.setText("2");
+                    else if(equalto) {
+                        screen.setText("2");
+                        equalto=false;
                     }
-
                     else
-                    {
-                        Toast.makeText(getApplicationContext(),"length Exceeded the limit",Toast.LENGTH_LONG).show();
-                    }
-
+                        screen.setText(prevInput + "2");
                 }
 
+                else
+                {
+                    Toast.makeText(getApplicationContext(),"length Exceeded the limit",Toast.LENGTH_LONG).show();
+                }
 
-            });
-            three.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    prevInput = screen.getText().toString();
+            }
 
-                    if (prevInput.length() < 9) {
-                        if(prevInput.equals("0"))
+
+        });
+        three.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                prevInput = screen.getText().toString();
+
+                if (prevInput.length() < 9) {
+                    if(prevInput.equals("0"))
                         screen.setText("3");
 
-                    else if(equalFlag) {
+                    else if(equalto) {
                         screen.setText("3");
-                        equalFlag=false;
+                        equalto=false;
                     }
                     else
                         screen.setText(prevInput + "3");
                 }
 
                 else
-                    {
-                        Toast.makeText(getApplicationContext(),"length Exceeded the limit",Toast.LENGTH_LONG).show();
+                {
+                    Toast.makeText(getApplicationContext(),"length Exceeded the limit",Toast.LENGTH_LONG).show();
+                }
+
+            }
+
+
+        });
+
+        Four.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                prevInput = screen.getText().toString();
+                if (prevInput.length() < 9) {
+                    if (prevInput.equals("0"))
+                        screen.setText("4");
+                    else if(equalto) {
+                        screen.setText("4");
+                        equalto=false;
                     }
+                    else
+                        screen.setText(prevInput + "4");
+                } else
 
+                {
+                    Toast.makeText(getApplicationContext(),"length Exceeded the limit",Toast.LENGTH_LONG).show();
                 }
+            }
+        });
 
-
-            });
-
-            Four.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    prevInput = screen.getText().toString();
-                    if (prevInput.length() < 9) {
-                        if (prevInput.equals("0"))
-                            screen.setText("4");
-                        else if(equalFlag) {
-                            screen.setText("4");
-                            equalFlag=false;
-                        }
-                        else
-                            screen.setText(prevInput + "4");
-                    } else
-
-                    {
-                        Toast.makeText(getApplicationContext(),"length Exceeded the limit",Toast.LENGTH_LONG).show();
+        Five.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                prevInput = screen.getText().toString();
+                if (prevInput.length() < 9) {
+                    if (prevInput.equals("0"))
+                        screen.setText("5");
+                    else if(equalto) {
+                        screen.setText("5");
+                        equalto=false;
                     }
+                    else
+                        screen.setText(prevInput + "5");
+                }else
+                {
+                    Toast.makeText(getApplicationContext(),"length Exceeded the limit",Toast.LENGTH_LONG).show();
                 }
-            });
+            }
+        });
 
-            Five.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    prevInput = screen.getText().toString();
-                    if (prevInput.length() < 9) {
-                        if (prevInput.equals("0"))
-                            screen.setText("5");
-                        else if(equalFlag) {
-                            screen.setText("5");
-                            equalFlag=false;
-                        }
-                        else
-                            screen.setText(prevInput + "5");
-                    }else
-                    {
-                        Toast.makeText(getApplicationContext(),"length Exceeded the limit",Toast.LENGTH_LONG).show();
-                    }
-                }
-            });
+        Six.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                prevInput = screen.getText().toString();
+                if (prevInput.length() < 9) {
 
-            Six.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    prevInput = screen.getText().toString();
-                    if (prevInput.length() < 9) {
+                    if (prevInput.equals("0"))
+                        screen.setText("6");
+                    else if(equalto) {
+                        screen.setText("6");
+                        equalto=false;
+                    }
+                    else
+                        screen.setText(prevInput + "6");
+                }else {
+                    Toast.makeText(getApplicationContext(),"length Exceeded the limit",Toast.LENGTH_LONG).show();
+                }
+            }
+        });
+        Seven.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                prevInput = screen.getText().toString();
+                if (prevInput.length() < 9) {
+                    if (prevInput.equals("0"))
+                        screen.setText("7");
+                    else if(equalto) {
+                        screen.setText("7");
+                        equalto=false;
+                    }
+                    else
+                        screen.setText(prevInput + "7");
+                }else
+                {
+                    Toast.makeText(getApplicationContext(),"length Exceeded the limit",Toast.LENGTH_LONG).show();
+                }
+            }
+        });
+        Eight.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                prevInput = screen.getText().toString();
+                if (prevInput.length() < 9) {
+                    if (prevInput.equals("0"))
+                        screen.setText("8");
+                    else if(equalto) {
+                        screen.setText("8");
+                        equalto=false;
+                    }
+                    else
+                        screen.setText(prevInput + "8");
+                }else
+                {
+                    Toast.makeText(getApplicationContext(),"length Exceeded the limit",Toast.LENGTH_LONG).show();
+                }
+            }
+        });
+        Nine.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                prevInput = screen.getText().toString();
+                if (prevInput.length() < 9) {
+                    if (prevInput.equals("0"))
+                        screen.setText("9");
+                    else if(equalto) {
+                        screen.setText("9");
+                        equalto=false;
+                    }
+                    else
+                        screen.setText(prevInput + "9");
+                }
+                else {
+                    Toast.makeText(getApplicationContext(),"length Exceeded the limit",Toast.LENGTH_LONG).show();
+                }
+            }
+        });
+        zero.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                prevInput = screen.getText().toString();
+                if (prevInput.length() < 9) {
+                    screen.setText(prevInput + "0");
+                }else
+                {
+                    Toast.makeText(getApplicationContext(),"length Exceeded the limit",Toast.LENGTH_LONG).show();
+                }
+            }
+        });
 
-                        if (prevInput.equals("0"))
-                            screen.setText("6");
-                        else if(equalFlag) {
-                            screen.setText("6");
-                            equalFlag=false;
-                        }
-                        else
-                            screen.setText(prevInput + "6");
-                    }else {
-                        Toast.makeText(getApplicationContext(),"length Exceeded the limit",Toast.LENGTH_LONG).show();
-                    }
-                }
-            });
-            Seven.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    prevInput = screen.getText().toString();
-                    if (prevInput.length() < 9) {
-                        if (prevInput.equals("0"))
-                            screen.setText("7");
-                        else if(equalFlag) {
-                            screen.setText("7");
-                            equalFlag=false;
-                        }
-                        else
-                            screen.setText(prevInput + "7");
-                    }else
-                    {
-                        Toast.makeText(getApplicationContext(),"length Exceeded the limit",Toast.LENGTH_LONG).show();
-                    }
-                }
-            });
-            Eight.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    prevInput = screen.getText().toString();
-                    if (prevInput.length() < 9) {
-                        if (prevInput.equals("0"))
-                            screen.setText("8");
-                        else if(equalFlag) {
-                            screen.setText("8");
-                            equalFlag=false;
-                        }
-                        else
-                            screen.setText(prevInput + "8");
-                    }else
-                    {
-                        Toast.makeText(getApplicationContext(),"length Exceeded the limit",Toast.LENGTH_LONG).show();
-                    }
-                }
-            });
-            Nine.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    prevInput = screen.getText().toString();
-                    if (prevInput.length() < 9) {
-                        if (prevInput.equals("0"))
-                            screen.setText("9");
-                        else if(equalFlag) {
-                            screen.setText("9");
-                            equalFlag=false;
-                        }
-                        else
-                            screen.setText(prevInput + "9");
-                    }
-                    else {
-                        Toast.makeText(getApplicationContext(),"length Exceeded the limit",Toast.LENGTH_LONG).show();
-                    }
-                }
-            });
-            zero.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    prevInput = screen.getText().toString();
-                    if (prevInput.length() < 9) {
-                        screen.setText(prevInput + "0");
-                    }else
-                    {
-                        Toast.makeText(getApplicationContext(),"length Exceeded the limit",Toast.LENGTH_LONG).show();
-                    }
-                }
-            });
-
-            decimal.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    prevInput = screen.getText().toString();
-                    screen.setText(prevInput + ".");
-                }
-            });
+        decimal.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                prevInput = screen.getText().toString();
+                screen.setText(prevInput + ".");
+            }
+        });
 
 
-      //All Clear Functionality
-            AC.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
+        //All Clear Functionality
+        AC.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
 
-                    screen.setText( "0");
-                }
-            });
+                screen.setText( "0");
+            }
+        });
 
         positiveNegative.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -324,7 +324,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         //Function for Square root
-            squareRoot.setOnClickListener(new View.OnClickListener() {
+        squareRoot.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 float resultSqrt;
@@ -336,108 +336,108 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-            //Function for Clear Screen
-            cancels.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
+        //Function for Clear Screen
+        cancels.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
 
-                    String data = screen.getText().toString();
-                   operation="clear";
+                String data = screen.getText().toString();
+                operation="clear";
 //                   calculate(operation);
-                    screen.setText(data.substring(0,data.length()-1));
+                screen.setText(data.substring(0,data.length()-1));
 
+            }
+        });
+
+        addition.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(!symbol)
+                {
+
+                    prevInput = screen.getText().toString();
+
+                    firstNumber = Float.parseFloat(prevInput);
+                    screen.setText(prevInput + "+");
+                    prevInput1 = screen.getText().toString();
                 }
-            });
-
-            addition.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    if(!symbol)
-                    {
-
-                        prevInput = screen.getText().toString();
-
-                        firstNumber = Float.parseFloat(prevInput);
-                        screen.setText(prevInput + "+");
-                        prevInput1 = screen.getText().toString();
-                    }
-                    else
-                    {
-                        result = calculate(operation);
-                        screen.setText(result + "+");
-                    }
-                    symbol = true;
-                    operation="addition";
-
-
+                else
+                {
+                    result = calculate(operation);
+                    screen.setText(result + "+");
                 }
-            });
-            substraction.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    if(!symbol)
-                    {
+                symbol = true;
+                operation="addition";
 
-                        prevInput = screen.getText().toString();
 
-                        firstNumber = Float.parseFloat(prevInput);
-                        screen.setText(prevInput + "-");
-                        prevInput1 = screen.getText().toString();
-                    }
-                    else
-                    {
-                        result = calculate(operation);
-                        screen.setText(result + "-");
-                    }
-                    symbol = true;
-                    operation="subtraction";
+            }
+        });
+        substraction.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(!symbol)
+                {
+
+                    prevInput = screen.getText().toString();
+
+                    firstNumber = Float.parseFloat(prevInput);
+                    screen.setText(prevInput + "-");
+                    prevInput1 = screen.getText().toString();
                 }
-            });
-            multiplication.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    if(!symbol)
-                    {
-
-                        prevInput = screen.getText().toString();
-
-                        firstNumber = Float.parseFloat(prevInput);
-                        screen.setText(prevInput + "*");
-                        prevInput1 = screen.getText().toString();
-                    }
-                    else
-                    {
-                        result = calculate(operation);
-                        screen.setText(result + "*");
-                    }
-                    symbol = true;
-                    operation="multiplication";
+                else
+                {
+                    result = calculate(operation);
+                    screen.setText(result + "-");
                 }
-            });
-            division.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    if(!symbol)
-                    {
+                symbol = true;
+                operation="subtraction";
+            }
+        });
+        multiplication.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(!symbol)
+                {
 
-                        prevInput = screen.getText().toString();
+                    prevInput = screen.getText().toString();
 
-                        firstNumber = Float.parseFloat(prevInput);
-                        screen.setText(prevInput + "/");
-                        prevInput1 = screen.getText().toString();
-                    }
-                    else
-                    {
-                        result = calculate(operation);
-                        screen.setText(result + "/");
-                    }
-                    symbol = true;
-                    operation="division";
+                    firstNumber = Float.parseFloat(prevInput);
+                    screen.setText(prevInput + "*");
+                    prevInput1 = screen.getText().toString();
                 }
-            });
+                else
+                {
+                    result = calculate(operation);
+                    screen.setText(result + "*");
+                }
+                symbol = true;
+                operation="multiplication";
+            }
+        });
+        division.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(!symbol)
+                {
+
+                    prevInput = screen.getText().toString();
+
+                    firstNumber = Float.parseFloat(prevInput);
+                    screen.setText(prevInput + "/");
+                    prevInput1 = screen.getText().toString();
+                }
+                else
+                {
+                    result = calculate(operation);
+                    screen.setText(result + "/");
+                }
+                symbol = true;
+                operation="division";
+            }
+        });
 
 
-            //equals Operation
+        //equals Operation
 
         euquals.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -445,10 +445,10 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-                    result = calculate(operation);
-                    screen.setText(Float.toString(result));
-                    equalFlag=true;
-                    symbol = false;
+                result = calculate(operation);
+                screen.setText(Float.toString(result));
+                equalto=true;
+                symbol = false;
             }
         });
     }
@@ -467,16 +467,16 @@ public class MainActivity extends AppCompatActivity {
                 break;
 
             case "addition":
-            secondNumber = Float.parseFloat(prevInput.substring(prevInput.indexOf("+")+1));
-            result = firstNumber + secondNumber;
-            break;
+                secondNumber = Float.parseFloat(prevInput.substring(prevInput.indexOf("+")+1));
+                result = firstNumber + secondNumber;
+                break;
 
 
             case "subtraction":
 
-            secondNumber = Float.parseFloat(prevInput.substring(prevInput.indexOf("-")+1));
-            result = firstNumber - secondNumber;
-            break;
+                secondNumber = Float.parseFloat(prevInput.substring(prevInput.indexOf("-")+1));
+                result = firstNumber - secondNumber;
+                break;
 
             case "multiplication":
                 secondNumber = Float.parseFloat(prevInput.substring(prevInput.indexOf("*")+1));
@@ -488,8 +488,8 @@ public class MainActivity extends AppCompatActivity {
                 result = firstNumber / secondNumber;
                 break;
         }
-            firstNumber=result;
-            return result;
+        firstNumber=result;
+        return result;
     }
 
 
